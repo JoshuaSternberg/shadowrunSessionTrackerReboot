@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Log In or Register:</title>
+
+    <script type="text/javascript" src="/vendors/angular.min.js"></script>
+    <script type="text/javascript" src="/scripts/app.js"></script>
+
+    <!--<script type="text/javascript" src="/scripts/factories/userFactory.js"></script>-->
+
+    <link rel="stylesheet" href="/styles/style.css">
+</head>
+
+<body id="indexPage" ng-app="myApp">
+    <header>
+        <img src="/images/Shadowrun-5-Logo-Flat-CMYK.png">
+        <h1>Session Tracker</h1>
+    </header>
+
+<div class="container">
+
+    <!-- Set form action and method -->
+    <p class="loginInfo">Enter user name and password to log in:</p>
+    <form class="loginForm" action="/" method="post">
+        <div>
+            <label class="login" for="username">Username:</label>
+            <input type="text" name="username" id="username"/>
+        </div>
+        <div>
+            <label class="login" for="password">Password:</label>
+            <input type="password" name="password" id="password"/>
+        </div>
+        <div>
+            <input class="loginButton" type="submit" value="Log In"/>
+        </div>
+    </form>
+
+    <form class="loginForm" action="/register" method="post">
+        <p class="loginInfo">New User? Enter a user name and password:</p>
+        <div>
+            <label class="login" for="username">New Username:</label>
+            <input type="text" name="username" id="newUsername"/>
+        </div>
+        <div>
+            <label class="login" for="password">New Password:</label>
+            <input type="password" name="password" id="newPassword"/>
+        </div>
+        <div>
+            <input class="loginButton" type="submit" value="Register"/>
+        </div>
+    </form>
+</div>
+</body>
+</html>

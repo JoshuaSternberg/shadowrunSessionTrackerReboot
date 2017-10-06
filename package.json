@@ -1,0 +1,12 @@
+{
+  "name": "shadowrunsessiontrackerreboot",
+  "version": "1.0.0",
+  "description": "Version 2. Familiarize and adapt for Atom as well as work on old skills",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node app.js"
+  },
+  "author": "Joshua Sternberg",
+  "license": "ISC"
+}
