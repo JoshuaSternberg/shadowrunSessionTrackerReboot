@@ -4,22 +4,49 @@ myApp.controller('Tracker', ['$scope', '$location', 'UserFactory', function
     console.log('Tracker controller!');
 
     $scope.userFactory = UserFactory;
+
+    //Stores all character information from the database
     $scope.characterArray = [];
+
+    //Stores all pre made character information that the left display will use
     $scope.preMadeNpcArray = [];
+
+    //Stores all custom npc information that the right side to use
     $scope.customNpcArray = [];
+
+    //Stores all information for the current session
     $scope.sessionArray = [];
 
     //Get all the npc data
     $scope.userFactory.factoryRetrievePreMadeNpcs().then(function () {
         $scope.characterArray = $scope.userFactory.factoryPreMadeNpcsList();
-        console.log($scope.characterArray);
+        console.log(' Character Array', $scope.characterArray);
       });
 
     //Get all the session data for the current user
     $scope.refreshSessionData = function () {
         $scope.userFactory.factoryRetrieveSessions().then(function () {
             $scope.sessionArray = $scope.userFactory.factoryRetrieveSessionsList();
-            console.log($scope.sessionArray);
+
+            //Populate dropdown boxes
+            $scope.selectedSession = $scope.sessionArray[0];
+            for (var j = 0; j < $scope.characterArray.length; j++) {
+              if ($scope.characterArray[j].source == 'pre-made') {
+                $scope.preMadeNpcSelect = $scope.characterArray[j];
+                break;
+              }
+            }
+
+            for (var i = 0; i < $scope.characterArray.length; i++) {
+              if ($scope.characterArray[i].source == 'custom') {
+                $scope.customNpcSelect = $scope.characterArray[i];
+                break;
+              }
+            }
+
+            console.log('Session Array ', $scope.sessionArray);
+            console.log('Pre-made NPC Array:', $scope.preMadeNpcArray);
+            console.log('Custom NPC Arrary ', $scope.customNpcArray);
           });
       };
 
