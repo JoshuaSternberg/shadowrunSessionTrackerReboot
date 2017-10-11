@@ -28,7 +28,7 @@ myApp.controller('Tracker', ['$scope', '$location', 'UserFactory', function
         $scope.userFactory.factoryRetrieveSessions().then(function () {
             $scope.sessionArray = $scope.userFactory.factoryRetrieveSessionsList();
 
-            //Populate dropdown boxes
+            //Set a default in the dropdown boxes after they populate
             $scope.selectedSession = $scope.sessionArray[0];
             for (var j = 0; j < $scope.characterArray.length; j++) {
               if ($scope.characterArray[j].source == 'pre-made') {
