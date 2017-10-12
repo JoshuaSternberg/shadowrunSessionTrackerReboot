@@ -112,6 +112,13 @@ h2 {
     color: #FAF55D;
 }
 
+/*Changing the sub-headings on the tracker.html and input.html views*/
+h3 {
+    color: #FAF55D;
+    text-align: center;
+    font-size: 30px;
+}
+
 
 
 
@@ -234,13 +241,6 @@ h2 {
 .skillsWeaponsHeaderSpacingSpan {
     display: inline;
 }
-
-
-
-
-
-
-
 
 
 /*Styling for the condition monitors on the display of each npc in the tracker.html view*/
