@@ -107,7 +107,7 @@ header, .loginInfo {
     float: right;
 }
 
-/*Changing the sub-headings on tracker.html*/
+/*Changing the sub-headings on the tracker.html and input.html views*/
 h2 {
     color: #FAF55D;
 }
@@ -145,7 +145,7 @@ h2 {
     background-color: #d3d3d3;
 }
 
-/*Style the ng-options dropdowns*/
+/*Style the ng-options dropdowns in the tracker.html view*/
 .preMadeNpcSelectList, .customNpcSelect {
     background-color: #d3d3d3;
 }
