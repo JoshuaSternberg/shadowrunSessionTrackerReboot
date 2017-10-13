@@ -14,7 +14,7 @@ body {
 /*Affects the two h1s in the index.html and failure.html pages*/
 h1 {
     margin-top: 0;
-    margin-bottom: 60px;
+    margin-bottom: 45px;
     color: #ff9000;
     font-size: 50px;
     text-align: center;
