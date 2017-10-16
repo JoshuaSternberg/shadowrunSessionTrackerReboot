@@ -1,4 +1,7 @@
 <!DOCTYPE html>
+
+<h3>Session Tracker</h3>
+
 <div id="session">
     <select class="sessionList" ng-model="selectedSession" ng-options="session as session.snapshot_name for session
     in sessionArray">
@@ -105,15 +108,15 @@
             </p>
 
             <p class="attributesStyling">
-                <span class="attributesSpacingSpanStart">{{preMadeNpc.body}}</span>
-                <span class="attributesSpacingSpan">{{preMadeNpc.agility}}</span>
-                <span class="attributesSpacingSpan">{{preMadeNpc.reaction}}</span>
-                <span class="attributesSpacingSpan">{{preMadeNpc.strength}}</span>
-                <span class="attributesSpacingSpan">{{preMadeNpc.willpower}}</span>
-                <span class="attributesSpacingSpan">{{preMadeNpc.logic}}</span>
-                <span class="attributesSpacingSpan">{{preMadeNpc.intuition}}</span>
-                <span class="attributesSpacingSpan">{{preMadeNpc.charisma}}</span>
-                <span class="attributesSpacingSpan">{{preMadeNpc.essence}}</span>
+                <span class="attributesSpacingSpanStart">{{customNpc.body}}</span>
+                <span class="attributesSpacingSpan">{{customNpc.agility}}</span>
+                <span class="attributesSpacingSpan">{{customNpc.reaction}}</span>
+                <span class="attributesSpacingSpan">{{customNpc.strength}}</span>
+                <span class="attributesSpacingSpan">{{customNpc.willpower}}</span>
+                <span class="attributesSpacingSpan">{{customNpc.logic}}</span>
+                <span class="attributesSpacingSpan">{{customNpc.intuition}}</span>
+                <span class="attributesSpacingSpan">{{customNpc.charisma}}</span>
+                <span class="attributesSpacingSpan">{{customNpc.essence}}</span>
             </p>
 
             <p>
