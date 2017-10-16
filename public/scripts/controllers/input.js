@@ -8,6 +8,12 @@ myApp.controller('Input', ['$scope', '$location', 'UserFactory', function
 
     //$scope.skills = [];
 
+    $scope.databaseStunTrack = [];
+    $scope.databasePhysicalTrack = [];
+
+    $scope.convertStunTrack = function () {
+    };
+
     $scope.saveChar = function () {
         character = {
             source: 'custom',
