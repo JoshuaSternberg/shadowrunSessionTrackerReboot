@@ -30,6 +30,7 @@ myApp.controller('Tracker', ['$scope', '$location', 'UserFactory', function
 
             //Set a default in the dropdown boxes after they populate
             $scope.selectedSession = $scope.sessionArray[0];
+
             for (var j = 0; j < $scope.characterArray.length; j++) {
               if ($scope.characterArray[j].source == 'pre-made') {
                 $scope.preMadeNpcSelect = $scope.characterArray[j];
