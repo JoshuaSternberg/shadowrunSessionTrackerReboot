@@ -20,6 +20,9 @@ myApp.controller('Input', ['$scope', '$location', 'UserFactory', function
           $scope.databaseStunTrack.push(false);
         }
 
+        console.log($scope.databaseStunTrack);
+        console.log($scope.databasePhysicalTrack);
+
         character = {
             source: 'custom',
             name: $scope.charName,

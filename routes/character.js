@@ -30,7 +30,9 @@ router.post('/', function (req, res) {
         mental_limit: req.body.mental_limit,
         social_limit: req.body.social_limit,
         physical_track: req.body.physical_track,
+        current_stun: [],
         stun_track: req.body.stun_track,
+        current_health: [],
         armor: req.body.armor,
         character_notes: req.body.agility,
 
