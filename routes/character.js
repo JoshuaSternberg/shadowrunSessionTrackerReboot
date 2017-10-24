@@ -5,6 +5,7 @@ var router = express.Router();
 //Post new npc to the database
 router.post('/', function (req, res) {
 
+    //Get the correct values in the stun and physical arrays
     var healthArray = [];
     for (var i = 0; i < req.body.physical_track; i++) {
       healthArray.push(false);
