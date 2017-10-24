@@ -5,10 +5,13 @@ myApp.controller('Input', ['$scope', '$location', 'UserFactory', function
 
     $scope.userFactory = UserFactory;
     $scope.character = {};
+    $scope.weaponsArray = {};
 
     //$scope.skills = [];
 
     $scope.saveChar = function () {
+
+        //Adding values to the stun and physical track arrays
         // $scope.databaseStunTrack = [];
         // $scope.databasePhysicalTrack = [];
 
