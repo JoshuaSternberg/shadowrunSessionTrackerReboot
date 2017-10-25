@@ -12,7 +12,7 @@ var WeaponSchema =
             recoil_compensation: String,
           },
         {
-            collection: 'Weapons',
+            collection: 'Character',
           }
     );
 
