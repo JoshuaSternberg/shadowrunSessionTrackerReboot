@@ -5,9 +5,14 @@ myApp.controller('Input', ['$scope', '$location', 'UserFactory', function
 
     $scope.userFactory = UserFactory;
     $scope.character = {};
-    $scope.weaponsArray = {};
+    $scope.weaponsArray = [];
 
     //$scope.skills = [];
+
+    //Add the input weapon to the weaponsArray when the addWeapon button is clicked
+    $scope.addWeapon = function (weapon) {
+        $scope.weaponsArray.push(angular.copy(weapon));
+      };
 
     $scope.saveChar = function () {
 
