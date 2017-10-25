@@ -118,6 +118,9 @@
     </div>
 
     <div id="weaponList">
-
-    </div>
+        <div class="weaponDisplay" ng-repeat="weapon in weaponsArray track by $index">
+            <span class="weaponName">{{weapon.name}}</span>
+            <button class="deleteWeapon" ng-click="deleteWeapon($index)">X</button>
+          </div>
+        </div>
 </form>
