@@ -90,7 +90,27 @@
     <div id="weaponStats">
         <p class="weaponStats">Weapon Stats:</p>
 
-       <div id="weaponLabels">
+        <div id="weaponLabels">
+            <label class="weapon" for="weaponType">Weapon Type:</label>
+            <br><label class="weapon" for="weaponDamage">Weapon Damage:</label>
+            <br><label class="weapon" for="weaponArmorPiercing">Armor Piercing:</label>
+            <br><label class="weapon" for="weaponFireModes">Firing Modes:</label>
+            <br><label class="weapon" for="weaponAmmoType">Ammo Type:</label>
+            <br><label class="weapon" for="weaponRecoilCompensation">Recoil Compensation:</label>
+            <br><label class="weapon" for="weaponAccuracy">Accuracy:</label>
+        </div>
+
+       <div id="weaponInput">
+           <input type="text" ng-model="weapon.type" id="weaponType"/>
+           <br><input type="text" ng-model="weaponDamage" id="weaponDamage"/>
+           <br><input type="text" ng-model="weaponArmorPiercing" id="weaponArmorPiercing"/>
+           <br><input type="text" ng-model="weaponFireModes" id="weaponFireModes"/>
+           <br><input type="text" ng-model="weaponAmmoType" id="weaponAmmoType"/>
+           <br><input type="text" ng-model="weaponRecoilCompensation" id="weaponRecoilCompensation"/>
+           <br><input type="text" ng-model="weaponAccuracy" id="weaponAccuracy"/>
+       </div>
+
+       <!-- <div id="weaponLabels">
            <label class="weapon" for="weaponType">Weapon Type:</label>
            <br><label class="weapon" for="weaponDamage">Weapon Damage:</label>
            <br><label class="weapon" for="weaponArmorPiercing">Armor Piercing:</label>
@@ -98,9 +118,9 @@
            <br><label class="weapon" for="weaponAmmoType">Ammo Type:</label>
            <br><label class="weapon" for="weaponRecoilCompensation">Recoil Compensation:</label>
            <br><label class="weapon" for="weaponAccuracy">Accuracy:</label>
-       </div>
+       </div> -->
 
-        <div id="weaponInput">
+        <!-- <div id="weaponInput">
             <input type="text" ng-model="weaponType" id="weaponType"/>
             <br><input type="text" ng-model="weaponDamage" id="weaponDamage"/>
             <br><input type="text" ng-model="weaponArmorPiercing" id="weaponArmorPiercing"/>
@@ -108,18 +128,18 @@
             <br><input type="text" ng-model="weaponAmmoType" id="weaponAmmoType"/>
             <br><input type="text" ng-model="weaponRecoilCompensation" id="weaponRecoilCompensation"/>
             <br><input type="text" ng-model="weaponAccuracy" id="weaponAccuracy"/>
-        </div>
+        </div> -->
 
         <div class="weaponNotesDiv">
             <label class="weaponNotesLabel" for="weaponNotes">Notes:</label>
             <textarea rows="4" cols="61" ng-model="weaponNotes" id="weaponNotes"></textarea>
-            <button class="addWeapon" ng-click="">Add Weapon:</button>
+            <button class="addWeapon" ng-click="addWeapon()">Add Weapon:</button>
         </div>
     </div>
 
     <div id="weaponList">
         <div class="weaponDisplay" ng-repeat="weapon in weaponsArray track by $index">
-            <span class="weaponName">{{weapon.name}}</span>
+            <span class="weaponTypeList">{{weapon.type}}</span>
             <button class="deleteWeapon" ng-click="deleteWeapon($index)">X</button>
           </div>
         </div>
