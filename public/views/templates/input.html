@@ -101,13 +101,13 @@
         </div>
 
        <div id="weaponInput">
-           <input type="text" ng-model="weapon.type" id="weaponType"/>
-           <br><input type="text" ng-model="weaponDamage" id="weaponDamage"/>
-           <br><input type="text" ng-model="weaponArmorPiercing" id="weaponArmorPiercing"/>
-           <br><input type="text" ng-model="weaponFireModes" id="weaponFireModes"/>
-           <br><input type="text" ng-model="weaponAmmoType" id="weaponAmmoType"/>
-           <br><input type="text" ng-model="weaponRecoilCompensation" id="weaponRecoilCompensation"/>
-           <br><input type="text" ng-model="weaponAccuracy" id="weaponAccuracy"/>
+           <input type="text" ng-model="currentWeapon.type" id="weaponType"/>
+           <br><input type="text" ng-model="currentWeapon.damage" id="weaponDamage"/>
+           <br><input type="text" ng-model="currentWeapon.armor_piercing" id="weaponArmorPiercing"/>
+           <br><input type="text" ng-model="currentWeapon.modes" id="weaponFireModes"/>
+           <br><input type="text" ng-model="currentWeapon.ammo_type" id="weaponAmmoType"/>
+           <br><input type="text" ng-model="currentWeapon.recoil" id="weaponRecoilCompensation"/>
+           <br><input type="text" ng-model="currentWeapon.accuracy" id="weaponAccuracy"/>
        </div>
 
        <!-- <div id="weaponLabels">
@@ -132,15 +132,19 @@
 
         <div class="weaponNotesDiv">
             <label class="weaponNotesLabel" for="weaponNotes">Notes:</label>
-            <textarea rows="4" cols="61" ng-model="weaponNotes" id="weaponNotes"></textarea>
+            <textarea rows="4" cols="61" ng-model="currentWeapon.weapon_notes" id="weaponNotes"></textarea>
             <button class="addWeapon" ng-click="addWeapon()">Add Weapon:</button>
+        </div>
+
+        <div id="weaponList">
+            <div class="weaponDisplay" ng-repeat="weapon in weaponsArray track by $index">
+                <span class="weaponList">{{weapon.model}} [{{weapon.type}}, {{weapon.damage}}, {{weapon.armor_piercing}},
+                  {{weapon.firing_modes}}, {{weapon.ammo_type}}, {{weapon.recoil_compensation}},
+                  {{weapon.accuracy}}]<br>{{weapon.weapon_notes}}</span>
+                <button class="deleteWeapon" ng-click="deleteWeapon($index)">X</button>
+            </div>
         </div>
     </div>
 
-    <div id="weaponList">
-        <div class="weaponDisplay" ng-repeat="weapon in weaponsArray track by $index">
-            <span class="weaponTypeList">{{weapon.type}}</span>
-            <button class="deleteWeapon" ng-click="deleteWeapon($index)">X</button>
-          </div>
-        </div>
+
 </form>

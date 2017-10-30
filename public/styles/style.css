@@ -289,15 +289,21 @@ h3 {
 }
 
 /*positioning for the #skills and #skillList divs on the input.html view*/
-#skills, #skillList {
+
+#skills {
     width: 50%;
     float: left;
 }
 
 /*positioning for the #weaponStats and #weaponList divs on the input.html view*/
-#weaponStats, #weaponList {
+
+#weaponStats {
     width: 50%;
     float: right;
+}
+
+#weaponList, #skillList {
+    float: left;
 }
 
 /*Styling for the saveChar 'button' on the input.html view*/

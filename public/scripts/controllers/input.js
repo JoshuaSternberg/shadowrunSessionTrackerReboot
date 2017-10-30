@@ -6,22 +6,42 @@ myApp.controller('Input', ['$scope', '$location', 'UserFactory', function
     $scope.userFactory = UserFactory;
     $scope.character = {};
     $scope.weaponsArray = [];
-    $scope.weapon = {
+    $scope.currentWeapon = {
+      model: '',
       type: '',
       damage: '',
-      ap: '',
-      modes: '',
-      ammotype: '',
-      rc: '',
+      armor_piercing: '',
+      firing_modes: '',
+      ammo_type: '',
+      recoil_compensation: '',
       accuracy: '',
+      weapon_notes: '',
     };
 
     //$scope.skills = [];
 
     //Add the input weapon to the weaponsArray when the addWeapon button is clicked
     $scope.addWeapon = function () {
-        $scope.weaponsArray.push($scope.weapon);
+        $scope.weaponsArray.push($scope.currentWeapon);
+
+        $scope.currentWeapon = {
+          model: '',
+          type: '',
+          damage: '',
+          armor_piercing: '',
+          firing_modes: '',
+          ammo_type: '',
+          recoil_compensation: '',
+          accuracy: '',
+          weapon_notes: '',
+        };
+
         console.log('Weapons Array ', $scope.weaponsArray);
+      };
+
+    $scope.deleteWeapon = function (index) {
+        console.log(index);
+        $scope.weaponsArray.splice(index, 1);
       };
 
     $scope.saveChar = function () {
