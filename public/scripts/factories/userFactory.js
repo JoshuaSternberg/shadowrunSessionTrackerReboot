@@ -1,22 +1,22 @@
 myApp.factory('UserFactory', ['$http', function ($http) {
 
-    var preMadeNpcsList = [];
+    var characterList = [];
     var sessionList = [];
 
     //The call to get the pre-made npcs from the similarly named collection from the database
-    var getPreMadeNpcs = function () {
+    var retrieveAllNpcs = function () {
         var promise = $http.get('/preMadeNpcs').then(function (response) {
-            preMadeNpcsList = response.data;
+            characterList = response.data;
           });
 
         return promise;
       };
 
     //save the npc to the database
-    var saveNpc = function (npc) {
-        $http.post('/preMadeNpcs', npc).then(function (response) {
-        });
-      };
+    // var saveNpc = function (npc) {
+    //     $http.post('/preMadeNpcs', npc).then(function (response) {
+    //     });
+    //   };
 
     //Save the current session to the database
     var saveSession = function (custom, preMade) {
@@ -37,13 +37,13 @@ myApp.factory('UserFactory', ['$http', function ($http) {
     //public exposed functions
     var publicFunctions = {
         //Get the entire database list of npcs
-        factoryRetrievePreMadeNpcs: function () {
-            return getPreMadeNpcs();
+        factoryRetrieveAllNpcs: function () {
+            return retrieveAllNpcs();
           },
 
         //expose the preMadeNpcList to the rest of the program
-        factoryPreMadeNpcsList: function () {
-            return preMadeNpcsList;
+        factoryCharacterList: function () {
+            return characterList;
           },
 
         //call the function to save a new npc to the database
