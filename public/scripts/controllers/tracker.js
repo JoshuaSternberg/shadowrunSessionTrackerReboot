@@ -18,8 +18,8 @@ myApp.controller('Tracker', ['$scope', '$location', 'UserFactory', function
     $scope.sessionArray = [];
 
     //Get all the npc data
-    $scope.userFactory.factoryRetrievePreMadeNpcs().then(function () {
-        $scope.characterArray = $scope.userFactory.factoryPreMadeNpcsList();
+    $scope.userFactory.factoryRetrieveAllNpcs().then(function () {
+        $scope.characterArray = $scope.userFactory.factoryCharacterList();
         console.log(' Character Array', $scope.characterArray);
       });
 
