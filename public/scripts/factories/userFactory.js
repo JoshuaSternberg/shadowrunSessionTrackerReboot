@@ -12,11 +12,11 @@ myApp.factory('UserFactory', ['$http', function ($http) {
         return promise;
       };
 
-    //save the npc to the database
-    // var saveNpc = function (npc) {
-    //     $http.post('/preMadeNpcs', npc).then(function (response) {
-    //     });
-    //   };
+    // save the npc to the database
+    var saveNpc = function (npc) {
+        $http.post('/preMadeNpcs', npc).then(function (response) {
+        });
+      };
 
     //Save the current session to the database
     var saveSession = function (custom, preMade) {

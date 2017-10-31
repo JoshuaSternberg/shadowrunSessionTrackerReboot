@@ -5,16 +5,19 @@ var router = express.Router();
 //Post new npc to the database
 router.post('/', function (req, res) {
 
-    //Get the correct values in the stun and physical arrays
+    // Get the correct values in the stun and physical arrays
     var healthArray = [];
     for (var i = 0; i < req.body.physical_track; i++) {
-      healthArray.push(false);
+      healthArray.push({ value: false });
     }
 
     var stunArray = [];
     for (var j = 0; j < req.body.stun_track; j++) {
-      stunArray.push(false);
+      stunArray.push({ value: false });
     }
+
+    console.log(healthArray);
+    console.log(stunArray);
 
     var addNpc = new Character({
         name: req.body.name,
