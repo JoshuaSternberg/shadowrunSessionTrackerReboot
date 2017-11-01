@@ -4,6 +4,21 @@ var router = express.Router();
 
 //Post new npc to the database
 router.post('/', function (req, res) {
+
+    // // Get the correct values in the stun and physical arrays
+    var healthArray = [];
+    for (var i = 0; i < req.body.physical_track; i++) {
+      healthArray.push(({ value: false }));
+    }
+
+    var stunArray = [];
+    for (var j = 0; j < req.body.stun_track; j++) {
+      stunArray.push(({ value: false }));
+    }
+
+    console.log('character.js ', healthArray);
+    console.log('character.js ', stunArray);
+
     var addNpc = new Character({
         name: req.body.name,
         source: req.body.source,
@@ -30,7 +45,9 @@ router.post('/', function (req, res) {
         mental_limit: req.body.mental_limit,
         social_limit: req.body.social_limit,
         physical_track: req.body.physical_track,
+        current_stun: stunArray,
         stun_track: req.body.stun_track,
+        current_health: healthArray,
         armor: req.body.armor,
         character_notes: req.body.agility,
 

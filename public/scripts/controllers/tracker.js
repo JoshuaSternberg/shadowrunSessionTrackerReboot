@@ -18,8 +18,8 @@ myApp.controller('Tracker', ['$scope', '$location', 'UserFactory', function
     $scope.sessionArray = [];
 
     //Get all the npc data
-    $scope.userFactory.factoryRetrievePreMadeNpcs().then(function () {
-        $scope.characterArray = $scope.userFactory.factoryPreMadeNpcsList();
+    $scope.userFactory.factoryRetrieveAllNpcs().then(function () {
+        $scope.characterArray = $scope.userFactory.factoryCharacterList();
         console.log(' Character Array', $scope.characterArray);
       });
 
@@ -30,6 +30,7 @@ myApp.controller('Tracker', ['$scope', '$location', 'UserFactory', function
 
             //Set a default in the dropdown boxes after they populate
             $scope.selectedSession = $scope.sessionArray[0];
+
             for (var j = 0; j < $scope.characterArray.length; j++) {
               if ($scope.characterArray[j].source == 'pre-made') {
                 $scope.preMadeNpcSelect = $scope.characterArray[j];
