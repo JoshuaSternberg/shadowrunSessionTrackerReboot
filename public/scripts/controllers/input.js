@@ -47,19 +47,19 @@ myApp.controller('Input', ['$scope', '$location', 'UserFactory', function
     $scope.saveChar = function () {
 
         //Adding values to the stun and physical track arrays
-        $scope.databaseStunTrack = [];
-        $scope.databasePhysicalTrack = [];
+        // $scope.databaseStunTrack = [];
+        // $scope.databasePhysicalTrack = [];
 
-        for (var i = 0; i < $scope.charPhysicalTrack; i++) {
-          $scope.databasePhysicalTrack.push({ value: false });
-        }
+        // for (var i = 0; i < $scope.charPhysicalTrack; i++) {
+        //   $scope.databasePhysicalTrack.push({ value: false });
+        // }
 
-        for (var j = 0; j < $scope.charStunTrack; j++) {
-          $scope.databaseStunTrack.push({ value: false });
-        }
+        // for (var j = 0; j < $scope.charStunTrack; j++) {
+        //   $scope.databaseStunTrack.push({ value: false });
+        // }
 
-        console.log($scope.databaseStunTrack);
-        console.log($scope.databasePhysicalTrack);
+        // console.log($scope.databaseStunTrack);
+        // console.log($scope.databasePhysicalTrack);
 
         character = {
             source: 'custom',
@@ -89,10 +89,10 @@ myApp.controller('Input', ['$scope', '$location', 'UserFactory', function
             social_limit: $scope.charSocialLimit,
             physical_track: $scope.charPhysicalTrack,
 
-            current_health: $scope.databasePhysicalTrack,
+            // current_health: $scope.databasePhysicalTrack,
             stun_track: $scope.charStunTrack,
 
-            current_stun: $scope.databaseStunTrack,
+            // current_stun: $scope.databaseStunTrack,
             armor: $scope.charArmor,
             character_notes: $scope.charNotes,
 
