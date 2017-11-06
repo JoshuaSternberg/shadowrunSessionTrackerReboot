@@ -65,7 +65,7 @@
             <p class="charDisplaySub-header">Weapons:</p>
             <div class="skillsWeaponsHeaderSpacingSpan" ng-repeat="weapon in preMadeNpc.weapon track by $index">
                 <span>{{weapon.model}} [{{weapon.type}}, Acc {{weapon.accuracy}}, {{weapon.damage}},
-                     {{weapon.armor_piercing}}, {{weapon.firing_modes}}, {{weapon.recoil_compensation}},
+                     {{weapon.armor_piercing}} AP, {{weapon.firing_modes}}, {{weapon.recoil_compensation}} RC,
                      {{weapon.ammo_count}}, {{weapon.notes}}]
                 </span><br>
             </div>
@@ -134,7 +134,7 @@
             <p class="charDisplaySub-header">Weapons:</p>
             <div class="skillsWeaponsHeaderSpacingSpan" ng-repeat="weapon in customNpc.weapon track by $index">
                 <span>{{weapon.model}} [{{weapon.type}}, Acc {{weapon.accuracy}}, {{weapon.damage}},
-                     {{weapon.armor_piercing}}, {{weapon.firing_modes}}, {{weapon.recoil_compensation}},
+                     {{weapon.armor_piercing}} AP, {{weapon.firing_modes}}, {{weapon.recoil_compensation}} RC,
                      {{weapon.ammo_count}}, {{weapon.notes}}]
                 </span><br>
             </div>
