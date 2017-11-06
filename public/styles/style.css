@@ -252,7 +252,7 @@ the input.html view*/
 
 /*Styling for the weapons header on the npc display in the tracker.html view
 and the input.html view */
-.skillsWeaponsHeaderSpacingSpan, .weaponDisplay {
+.skillsWeaponsHeaderSpacingSpan {
     display: inline;
 }
 
@@ -337,7 +337,7 @@ and the input.html view */
 }
 
 /*positioning for the div containing the labels in the weapon section in the input.html view*/
-#weaponLabels, .weaponNotesLabel {
+#weaponLabels, .weaponNotesLabel, .weaponListFloat {
     float: left;
 }
 
@@ -367,4 +367,8 @@ and the input.html view */
 .weapon {
     margin-bottom: 5px;
     margin-top: 5px;
+}
+
+.weaponDisplay {
+    width: 100%;
 }

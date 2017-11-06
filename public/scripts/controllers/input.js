@@ -88,17 +88,16 @@ myApp.controller('Input', ['$scope', '$location', 'UserFactory', function
             mental_limit: $scope.charMentalLimit,
             social_limit: $scope.charSocialLimit,
             physical_track: $scope.charPhysicalTrack,
-
-            // current_health: $scope.databasePhysicalTrack,
             stun_track: $scope.charStunTrack,
-
-            // current_stun: $scope.databaseStunTrack,
             armor: $scope.charArmor,
             character_notes: $scope.charNotes,
+            weapon: $scope.weaponsArray,
 
             //skills: $scope.skills,
 
           };
+
+        console.log(character);
         $scope.userFactory.factorySaveNpc(character);
         $scope.trackerView();
       };

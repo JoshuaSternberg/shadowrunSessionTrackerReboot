@@ -50,6 +50,7 @@ router.post('/', function (req, res) {
         current_health: healthArray,
         armor: req.body.armor,
         character_notes: req.body.agility,
+        weapon: req.body.weaponsArray,
 
         //"skills": req.body.skills,
 
