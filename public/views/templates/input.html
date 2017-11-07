@@ -121,10 +121,11 @@
         <div id="weaponList">
           <p class="weaponList">Weapons:</p>
             <div class="weaponDisplay" ng-repeat="weapon in weaponsArray track by $index">
+                <button class="deleteWeapon" ng-click="deleteWeapon($index)">X</button>
                 <span class="weaponListFloat">{{weapon.model}} [{{weapon.type}}, {{weapon.damage}}, {{weapon.armor_piercing}} AP,
                   {{weapon.firing_modes}}, {{weapon.ammo_type}} ammo, {{weapon.recoil_compensation}} RC,
                   Acc: {{weapon.accuracy}}]<br>Notes: {{weapon.weapon_notes}}</span>
-                  <button class="deleteWeapon" ng-click="deleteWeapon($index)">X</button>
+
             </div>
         </div>
     </div>

@@ -312,8 +312,9 @@ and the input.html view */
     float: right;
 }
 
-#weaponList, #skillList {
+#skillList, #weaponList {
     float: left;
+    width: 100%;
 }
 
 /*Styling for the saveChar 'button' on the input.html view*/
@@ -337,7 +338,7 @@ and the input.html view */
 }
 
 /*positioning for the div containing the labels in the weapon section in the input.html view*/
-#weaponLabels, .weaponNotesLabel, .weaponListFloat {
+#weaponLabels, .weaponNotesLabel, weaponListFloat {
     float: left;
 }
 
