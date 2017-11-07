@@ -1,5 +1,6 @@
 var Character = require('../models/character');
 var express = require('express');
+var Weapon = require('../models/weapon');
 var router = express.Router();
 
 //Post new npc to the database
