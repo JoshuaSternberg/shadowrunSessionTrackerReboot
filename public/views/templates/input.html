@@ -118,11 +118,11 @@
             <button class="addWeapon" ng-click="addWeapon()">Add Weapon:</button>
         </div>
 
-        <div id="weaponList">
-          <p class="weaponList">Weapons:</p>
+        <div id="weaponListContainer">
+          <p class="weaponListHeader">Weapons:</p>
             <div class="weaponDisplay" ng-repeat="weapon in weaponsArray track by $index">
                 <button class="deleteWeapon" ng-click="deleteWeapon($index)">X</button>
-                <span class="weaponListFloat">{{weapon.model}} [{{weapon.type}}, {{weapon.damage}}, {{weapon.armor_piercing}} AP,
+                <span class="weaponListBody">{{weapon.model}} [{{weapon.type}}, {{weapon.damage}}, {{weapon.armor_piercing}} AP,
                   {{weapon.firing_modes}}, {{weapon.ammo_type}} ammo, {{weapon.recoil_compensation}} RC,
                   Acc: {{weapon.accuracy}}]<br>Notes: {{weapon.weapon_notes}}</span>
 

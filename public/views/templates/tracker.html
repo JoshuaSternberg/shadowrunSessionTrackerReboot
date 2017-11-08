@@ -25,7 +25,7 @@
     <div id="defaultNpcView">
         <div class="npc" ng-repeat="preMadeNpc in preMadeNpcArray track by $index">
             <span class="trackerCharName">{{preMadeNpc.name}}</span>
-            <span>Metatype: {{preMadeNpc.metatype}}</span>
+            <span class="charDisplaySub-header">Metatype: </span>{{preMadeNpc.metatype}}
             <button class="deleteChar" ng-click="deletePreMadeChar($index)">X</button>
 
 

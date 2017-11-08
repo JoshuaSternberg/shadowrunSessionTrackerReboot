@@ -287,7 +287,7 @@ and the input.html view */
 }
 
 /*change the color of the fonts for the section titles in the input.html view */
-#general, .attributes, .derivedAttributes, .skills, .weaponStats, .weaponList {
+#general, .attributes, .derivedAttributes, .skills, .weaponStats, .weaponListHeader {
     color: #FAF55D;
     font-size: 20px;
 }
@@ -312,7 +312,7 @@ and the input.html view */
     float: right;
 }
 
-#skillList, #weaponList {
+#skillList, #weaponListContainer {
     float: left;
     width: 100%;
 }
@@ -338,7 +338,7 @@ and the input.html view */
 }
 
 /*positioning for the div containing the labels in the weapon section in the input.html view*/
-#weaponLabels, .weaponNotesLabel, weaponListFloat {
+#weaponLabels, .weaponNotesLabel {
     float: left;
 }
 
