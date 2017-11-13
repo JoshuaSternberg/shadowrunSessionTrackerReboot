@@ -17,8 +17,15 @@ router.post('/', function (req, res) {
       stunArray.push(({ value: false }));
     }
 
-    console.log('character.js ', healthArray);
-    console.log('character.js ', stunArray);
+    console.log('character.js health ', healthArray);
+    console.log('character.js stun ', stunArray);
+    console.log('character.js name', req.body.name);
+    console.log('character.js weapons', req.body.weaponsArray);
+
+    // var weaponArray = [];
+    // for (var i = 0; i < req.body.physical_track; i++) {
+    //   healthArray.push(({ value: false }));
+    // }
 
     var addNpc = new Character({
         name: req.body.name,
