@@ -89,7 +89,7 @@ myApp.controller('Tracker', ['$scope', '$location', 'UserFactory', function
     $scope.saveSession = function () {
         $scope.userFactory.factorySaveSession($scope.preMadeNpcArray, $scope.customNpcArray);
         $scope.refreshSessionData();
-        console.log('clicked!');
+        console.log('Save session button clicked!');
       };
 
     //for (var i = 0; 0 < $scope.sessionArray.length; i++){}
