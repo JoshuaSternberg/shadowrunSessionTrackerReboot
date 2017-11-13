@@ -4,8 +4,14 @@ myApp.controller('Input', ['$scope', '$location', 'UserFactory', function
     console.log('Input controller!');
 
     $scope.userFactory = UserFactory;
-    $scope.character = {};
+
+    //The array for all the weapon objects for the character
     $scope.weaponsArray = [];
+
+    //The object to store the character information for saving to the database
+    $scope.character = {};
+
+    //The object to store the currently input weapon information
     $scope.currentWeapon = {
       model: '',
       type: '',
@@ -36,7 +42,7 @@ myApp.controller('Input', ['$scope', '$location', 'UserFactory', function
           weapon_notes: '',
         };
 
-        console.log('Weapons Array ', $scope.weaponsArray);
+        console.log('input.js Weapons Array ', $scope.weaponsArray);
       };
 
     $scope.deleteWeapon = function (index) {
@@ -88,17 +94,16 @@ myApp.controller('Input', ['$scope', '$location', 'UserFactory', function
             mental_limit: $scope.charMentalLimit,
             social_limit: $scope.charSocialLimit,
             physical_track: $scope.charPhysicalTrack,
-
-            // current_health: $scope.databasePhysicalTrack,
             stun_track: $scope.charStunTrack,
-
-            // current_stun: $scope.databaseStunTrack,
             armor: $scope.charArmor,
             character_notes: $scope.charNotes,
+            weapon: $scope.weaponsArray,
 
             //skills: $scope.skills,
 
           };
+
+        console.log(character);
         $scope.userFactory.factorySaveNpc(character);
         $scope.trackerView();
       };

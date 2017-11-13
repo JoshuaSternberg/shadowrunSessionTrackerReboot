@@ -128,6 +128,18 @@ h3 {
 
 
 
+/*Shared styling for the input.html and tracker.html view*/
+
+
+/*styling for the delete button on the display of each npc in the tracker.html view and
+the input.html view*/
+.deleteChar, .deleteWeapon {
+    float: right;
+}
+
+
+
+
 /*Styling specifically for the tracker.html view*/
 
 
@@ -185,10 +197,7 @@ h3 {
     margin-top: 2px;
 }
 
-/*styling for the delete button on the display of each npc in the tracker.html view*/
-.deleteChar {
-    float: right;
-}
+
 
 /*Styling for the name of each npc display object in the tracker.html view*/
 .trackerCharName {
@@ -241,7 +250,8 @@ h3 {
     padding-top: 1px;
 }
 
-/*Styling for the attributes header on the npc display in the tracker.html view*/
+/*Styling for the weapons header on the npc display in the tracker.html view
+and the input.html view */
 .skillsWeaponsHeaderSpacingSpan {
     display: inline;
 }
@@ -277,7 +287,7 @@ h3 {
 }
 
 /*change the color of the fonts for the section titles in the input.html view */
-#general, .attributes, .derivedAttributes, .skills, .weaponStats {
+#general, .attributes, .derivedAttributes, .skills, .weaponStats, .weaponListHeader {
     color: #FAF55D;
     font-size: 20px;
 }
@@ -302,8 +312,9 @@ h3 {
     float: right;
 }
 
-#weaponList, #skillList {
+#skillList, #weaponListContainer {
     float: left;
+    width: 100%;
 }
 
 /*Styling for the saveChar 'button' on the input.html view*/
@@ -336,7 +347,7 @@ h3 {
     float: right;
 }
 
-#weaponType, #weaponDamage, #weaponArmorPiercing, #weaponFireModes, #weaponAmmoType,
+#weaponModel, #weaponType, #weaponDamage, #weaponArmorPiercing, #weaponFireModes, #weaponAmmoType,
 #weaponRecoilCompensation, #weaponAccuracy {
     float: right;
     margin-bottom: 1px;
@@ -357,4 +368,8 @@ h3 {
 .weapon {
     margin-bottom: 5px;
     margin-top: 5px;
+}
+
+.weaponDisplay {
+    width: 100%;
 }

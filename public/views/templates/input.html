@@ -91,7 +91,8 @@
         <p class="weaponStats">Weapon Stats:</p>
 
         <div id="weaponLabels">
-            <label class="weapon" for="weaponType">Weapon Type:</label>
+            <label class="weapon" for="weaponModel">Weapon Model:</label>
+            <br><label class="weapon" for="weaponType">Weapon Type:</label>
             <br><label class="weapon" for="weaponDamage">Weapon Damage:</label>
             <br><label class="weapon" for="weaponArmorPiercing">Armor Piercing:</label>
             <br><label class="weapon" for="weaponFireModes">Firing Modes:</label>
@@ -101,34 +102,15 @@
         </div>
 
        <div id="weaponInput">
-           <input type="text" ng-model="currentWeapon.type" id="weaponType"/>
+           <input type="text" ng-model="currentWeapon.model" id="weaponModel"/>
+           <br><input type="text" ng-model="currentWeapon.type" id="weaponType"/>
            <br><input type="text" ng-model="currentWeapon.damage" id="weaponDamage"/>
            <br><input type="text" ng-model="currentWeapon.armor_piercing" id="weaponArmorPiercing"/>
-           <br><input type="text" ng-model="currentWeapon.modes" id="weaponFireModes"/>
+           <br><input type="text" ng-model="currentWeapon.firing_modes" id="weaponFireModes"/>
            <br><input type="text" ng-model="currentWeapon.ammo_type" id="weaponAmmoType"/>
-           <br><input type="text" ng-model="currentWeapon.recoil" id="weaponRecoilCompensation"/>
+           <br><input type="text" ng-model="currentWeapon.recoil_compensation" id="weaponRecoilCompensation"/>
            <br><input type="text" ng-model="currentWeapon.accuracy" id="weaponAccuracy"/>
        </div>
-
-       <!-- <div id="weaponLabels">
-           <label class="weapon" for="weaponType">Weapon Type:</label>
-           <br><label class="weapon" for="weaponDamage">Weapon Damage:</label>
-           <br><label class="weapon" for="weaponArmorPiercing">Armor Piercing:</label>
-           <br><label class="weapon" for="weaponFireModes">Firing Modes:</label>
-           <br><label class="weapon" for="weaponAmmoType">Ammo Type:</label>
-           <br><label class="weapon" for="weaponRecoilCompensation">Recoil Compensation:</label>
-           <br><label class="weapon" for="weaponAccuracy">Accuracy:</label>
-       </div> -->
-
-        <!-- <div id="weaponInput">
-            <input type="text" ng-model="weaponType" id="weaponType"/>
-            <br><input type="text" ng-model="weaponDamage" id="weaponDamage"/>
-            <br><input type="text" ng-model="weaponArmorPiercing" id="weaponArmorPiercing"/>
-            <br><input type="text" ng-model="weaponFireModes" id="weaponFireModes"/>
-            <br><input type="text" ng-model="weaponAmmoType" id="weaponAmmoType"/>
-            <br><input type="text" ng-model="weaponRecoilCompensation" id="weaponRecoilCompensation"/>
-            <br><input type="text" ng-model="weaponAccuracy" id="weaponAccuracy"/>
-        </div> -->
 
         <div class="weaponNotesDiv">
             <label class="weaponNotesLabel" for="weaponNotes">Notes:</label>
@@ -136,12 +118,14 @@
             <button class="addWeapon" ng-click="addWeapon()">Add Weapon:</button>
         </div>
 
-        <div id="weaponList">
+        <div id="weaponListContainer">
+          <p class="weaponListHeader">Weapons:</p>
             <div class="weaponDisplay" ng-repeat="weapon in weaponsArray track by $index">
-                <span class="weaponList">{{weapon.model}} [{{weapon.type}}, {{weapon.damage}}, {{weapon.armor_piercing}},
-                  {{weapon.firing_modes}}, {{weapon.ammo_type}}, {{weapon.recoil_compensation}},
-                  {{weapon.accuracy}}]<br>{{weapon.weapon_notes}}</span>
                 <button class="deleteWeapon" ng-click="deleteWeapon($index)">X</button>
+                <span class="weaponListBody">{{weapon.model}} [{{weapon.type}}, {{weapon.damage}}, {{weapon.armor_piercing}} AP,
+                  {{weapon.firing_modes}}, {{weapon.ammo_type}} ammo, {{weapon.recoil_compensation}} RC,
+                  Acc: {{weapon.accuracy}}]<br>Notes: {{weapon.weapon_notes}}</span>
+
             </div>
         </div>
     </div>
