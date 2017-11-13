@@ -59,6 +59,7 @@ myApp.factory('UserFactory', ['$http', function ($http) {
             return retrieveSessions();
           },
 
+        //explose the sessionList to the rest of the program
         factoryRetrieveSessionsList: function () {
             return sessionList;
           },
