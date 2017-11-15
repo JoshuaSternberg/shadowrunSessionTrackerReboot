@@ -133,7 +133,7 @@ h3 {
 
 /*styling for the delete button on the display of each npc in the tracker.html view and
 the input.html view*/
-.deleteChar, .deleteWeapon {
+.deleteChar, .deleteWeapon, .deleteSkill {
     float: right;
 }
 
@@ -287,7 +287,8 @@ and the input.html view */
 }
 
 /*change the color of the fonts for the section titles in the input.html view */
-#general, .attributes, .derivedAttributes, .skills, .weaponStats, .weaponListHeader {
+#general, .attributes, .derivedAttributes, .skills, .weaponStats, .weaponListHeader,
+.skillListHeader {
     color: #FAF55D;
     font-size: 20px;
 }
@@ -312,9 +313,10 @@ and the input.html view */
     float: right;
 }
 
-#skillList, #weaponListContainer {
+#weaponListContainer, #skillListContainer {
     float: left;
     width: 100%;
+    margin: 5px;
 }
 
 /*Styling for the saveChar 'button' on the input.html view*/
@@ -360,7 +362,7 @@ and the input.html view */
 
 /*Spacing for the weaponNotes div that contains the notes and notes label in the input.html view*/
 .weaponNotesDiv {
-    float: right;
+    float: left;
     margin-top: 5px;
 }
 
@@ -370,6 +372,6 @@ and the input.html view */
     margin-top: 5px;
 }
 
-.weaponDisplay {
+.weaponDisplay, .skillDisplay {
     width: 100%;
 }

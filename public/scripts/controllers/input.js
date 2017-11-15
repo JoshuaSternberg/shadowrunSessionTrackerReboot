@@ -5,11 +5,20 @@ myApp.controller('Input', ['$scope', '$location', 'UserFactory', function
 
     $scope.userFactory = UserFactory;
 
+    //The array for all the skill objects for the character
+    $scope.skillsArray = [];
+
     //The array for all the weapon objects for the character
     $scope.weaponsArray = [];
 
     //The object to store the character information for saving to the database
     $scope.character = {};
+
+    //The object to store the currently input weapon information
+    $scope.currentSkill = {
+      name: '',
+      rank: '',
+    };
 
     //The object to store the currently input weapon information
     $scope.currentWeapon = {
@@ -24,7 +33,22 @@ myApp.controller('Input', ['$scope', '$location', 'UserFactory', function
       weapon_notes: '',
     };
 
-    //$scope.skills = [];
+    //Add the input weapon to the weaponsArray when the addWeapon button is clicked
+    $scope.addSkill = function () {
+        $scope.skillsArray.push($scope.currentSkill);
+
+        $scope.currentSkill = {
+          name: '',
+          rank: '',
+        };
+
+        console.log('input.js Skills Array ', $scope.skillsArray);
+      };
+
+    $scope.deleteSkill = function (index) {
+          console.log(index);
+          $scope.skillsArray.splice(index, 1);
+        };
 
     //Add the input weapon to the weaponsArray when the addWeapon button is clicked
     $scope.addWeapon = function () {
