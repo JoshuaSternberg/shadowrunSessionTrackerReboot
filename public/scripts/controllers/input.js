@@ -97,14 +97,16 @@ myApp.controller('Input', ['$scope', '$location', 'UserFactory', function
             stun_track: $scope.charStunTrack,
             armor: $scope.charArmor,
             character_notes: $scope.charNotes,
-            weapon: $scope.weaponsArray,
+
+            // weapon: $scope.weaponsArray,
 
             //skills: $scope.skills,
 
           };
 
-        console.log(character);
-        $scope.userFactory.factorySaveNpc(character);
+        console.log('input.js character to be saved: ', character);
+
+        $scope.userFactory.factorySaveNpc(character, $scope.weaponsArray);
         $scope.trackerView();
       };
 
