@@ -31,6 +31,7 @@ input {
 button {
     background-color: black;
     color: #ff9000;
+    margin: 1px;
 }
 
 
@@ -302,21 +303,22 @@ and the input.html view */
 /*positioning for the #skills and #skillList divs on the input.html view*/
 
 #skills {
-    width: 50%;
+    width: 49%;
     float: left;
+    margin-right: 1px;
 }
 
 /*positioning for the #weaponStats and #weaponList divs on the input.html view*/
 
 #weaponStats {
-    width: 50%;
+    width: 49%;
     float: right;
+    margin-left: 1px;
 }
 
 #weaponListContainer, #skillListContainer {
     float: left;
     width: 100%;
-    margin: 5px;
 }
 
 /*Styling for the saveChar 'button' on the input.html view*/
@@ -340,12 +342,12 @@ and the input.html view */
 }
 
 /*positioning for the div containing the labels in the weapon section in the input.html view*/
-#weaponLabels, .weaponNotesLabel {
+#weaponLabels, .weaponNotesLabel, .weaponListBody, .skillListBody {
     float: left;
 }
 
 /*positioning for the input containing the divs in the weapon section in the input.html view*/
-#weaponInput {
+#weaponInput  {
     float: right;
 }
 
@@ -374,4 +376,12 @@ and the input.html view */
 
 .weaponDisplay, .skillDisplay {
     width: 100%;
+    overflow: auto;
+    border-top: 2px solid #DAA520;
+    border-bottom: 2px solid #DAA520;
+    border-left: 1px solid #d3d3d3;
+    border-right: 1px solid #d3d3d3;
+    padding: 5px;
+    background-color: #707070;
+    margin-top: 2px;
 }
