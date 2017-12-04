@@ -5,7 +5,7 @@ var router = express.Router();
 
 //Post new npc to the database
 router.post('/', function (req, res) {
-    console.log('log the whole body object: ', req.body);
+    console.log('character.js - log the whole body object: ', req.body);
 
     // // Get the correct values in the stun and physical arrays
     var healthArray = [];
@@ -18,11 +18,18 @@ router.post('/', function (req, res) {
       stunArray.push(({ value: false }));
     }
 
+    var skillsArray = [];
+    for (var k = 0; k < req.body.skills.length; j++) {
+      skillsArray.push(req.body.skills[k]);
+    }
+
     console.log('character.js health ', healthArray);
     console.log('character.js stun ', stunArray);
     console.log('character.js name', req.body.name);
     console.log('character.js weapons', req.body.weapon);
     console.log('character.js weapons array length', req.body.weapon.length);
+    console.log('character.js skills array', req.body.skills);
+    console.log('character.js skills array variable', skillsArray);
 
     // var weaponArray = [];
     // for (var i = 0; i < req.body.physical_track; i++) {
@@ -61,8 +68,7 @@ router.post('/', function (req, res) {
         armor: req.body.armor,
         character_notes: req.body.agility,
         weapon: req.body.weapon,
-
-        //"skills": req.body.skills,
+        skills: skillsArray,
 
       });
 
