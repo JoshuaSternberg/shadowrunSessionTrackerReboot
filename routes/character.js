@@ -19,7 +19,7 @@ router.post('/', function (req, res) {
     }
 
     var skillsArray = [];
-    for (var k = 0; k < req.body.skills.length; j++) {
+    for (var k = 0; k < req.body.skills.length; k++) {
       skillsArray.push(req.body.skills[k]);
     }
 
