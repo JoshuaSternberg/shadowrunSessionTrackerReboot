@@ -76,14 +76,18 @@
     <div id="skills">
         <p class="skills">Skills:</p>
         <label for="charSkill">Enter skill:</label>
-        <input type="text" ng-model="charSkill" id="charSkill"/>
+        <input type="text" ng-model="currentSkill.name" id="charSkill"/>
         <label for="charSkillRank">Enter Skill Rank:</label>
-        <input type="text" ng-model="charSkillRank" id="charSkillRank"/>
-        <button class="addSkill" ng-click="">Add Skill:</button>
+        <input type="text" ng-model="currentSkill.rank" id="charSkillRank"/>
+        <button class="addSkill" ng-click="addSkill()">Add Skill:</button>
 
-    </div>
-
-    <div id="skillList">
+        <div id="skillListContainer">
+          <p class="skillListHeader">Skills:</p>
+            <div class="skillDisplay" ng-repeat="skill in skillsArray track by $index">
+                <button class="deleteSkill" ng-click="deleteSkill($index)">X</button>
+                <span class="skillListBody">{{skill.name}}: {{skill.rank}}</span>
+            </div>
+        </div>
     </div>
 
 
@@ -125,10 +129,8 @@
                 <span class="weaponListBody">{{weapon.model}} [{{weapon.type}}, {{weapon.damage}}, {{weapon.armor_piercing}} AP,
                   {{weapon.firing_modes}}, {{weapon.ammo_type}} ammo, {{weapon.recoil_compensation}} RC,
                   Acc: {{weapon.accuracy}}]<br>Notes: {{weapon.weapon_notes}}</span>
-
             </div>
         </div>
     </div>
-
-
+    
 </form>
