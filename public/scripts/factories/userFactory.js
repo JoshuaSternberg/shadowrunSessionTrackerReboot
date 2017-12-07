@@ -13,9 +13,7 @@ myApp.factory('UserFactory', ['$http', function ($http) {
       };
 
     // save the npc to the database
-    var saveNpc = function (npc, weapons) {
-        console.log('userFactory weapon array object: ', weapons);
-        npc.weapon = weapons;
+    var saveNpc = function (npc) {
         console.log('userFactory npc object: ', npc);
         $http.post('/preMadeNpcs', npc).then(function (response) {
         });
@@ -50,8 +48,8 @@ myApp.factory('UserFactory', ['$http', function ($http) {
           },
 
         //call the function to save a new npc to the database
-        factorySaveNpc: function (npc, weapons) {
-            return saveNpc(npc, weapons);
+        factorySaveNpc: function (npc) {
+            return saveNpc(npc);
           },
 
         factorySaveSession: function (custom, preMade) {

@@ -18,23 +18,12 @@ router.post('/', function (req, res) {
       stunArray.push(({ value: false }));
     }
 
-    var skillsArray = [];
-    for (var k = 0; k < req.body.skills.length; k++) {
-      skillsArray.push(req.body.skills[k]);
-    }
-
     console.log('character.js health ', healthArray);
     console.log('character.js stun ', stunArray);
     console.log('character.js name', req.body.name);
     console.log('character.js weapons', req.body.weapon);
     console.log('character.js weapons array length', req.body.weapon.length);
     console.log('character.js skills array', req.body.skills);
-    console.log('character.js skills array variable', skillsArray);
-
-    // var weaponArray = [];
-    // for (var i = 0; i < req.body.physical_track; i++) {
-    //   healthArray.push(({ value: false }));
-    // }
 
     var addNpc = new Character({
         name: req.body.name,
@@ -68,8 +57,7 @@ router.post('/', function (req, res) {
         armor: req.body.armor,
         character_notes: req.body.agility,
         weapon: req.body.weapon,
-        skills: skillsArray,
-
+        skills: req.body.skills,
       });
 
     //post new blog post
