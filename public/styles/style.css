@@ -217,7 +217,7 @@ the input.html view*/
 }
 
 /*Styling for the div wrapping the attributes in the tracker.html view*/
-.attributesHeaderStyling {
+.attributesColumnLabelStyling {
     background-color: black;
     color: #DAA520;
     border: 1px solid #DAA520;
