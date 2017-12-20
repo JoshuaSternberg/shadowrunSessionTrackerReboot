@@ -42,6 +42,8 @@ myApp.controller('Input', ['$scope', '$location', 'UserFactory', function
           rank: '',
         };
 
+        charSkill.focus();
+
         console.log('input.js Skills Array ', $scope.skillsArray);
       };
 
@@ -65,6 +67,8 @@ myApp.controller('Input', ['$scope', '$location', 'UserFactory', function
           accuracy: '',
           weapon_notes: '',
         };
+
+        weaponModel.focus();
 
         console.log('input.js Weapons Array ', $scope.weaponsArray);
       };
