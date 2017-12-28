@@ -28,28 +28,33 @@ myApp.controller('Tracker', ['$scope', '$location', 'UserFactory', function
         $scope.userFactory.factoryRetrieveSessions().then(function () {
             $scope.sessionArray = $scope.userFactory.factoryRetrieveSessionsList();
 
-            //Set a default in the dropdown boxes after they populate
-            $scope.selectedSession = $scope.sessionArray[0];
-
-            for (var j = 0; j < $scope.characterArray.length; j++) {
-              if ($scope.characterArray[j].source == 'pre-made') {
-                $scope.preMadeNpcSelect = $scope.characterArray[j];
-                break;
-              }
-            }
-
-            for (var i = 0; i < $scope.characterArray.length; i++) {
-              if ($scope.characterArray[i].source == 'custom') {
-                $scope.customNpcSelect = $scope.characterArray[i];
-                break;
-              }
-            }
+            $scope.populateDropdownBoxes();
 
             console.log('Session Array ', $scope.sessionArray);
             console.log('Pre-made NPC Array:', $scope.preMadeNpcArray);
             console.log('Custom NPC Arrary ', $scope.customNpcArray);
           });
       };
+
+    $scope.populateDropdownBoxes = function () {
+
+      //Set a default in the dropdown boxes after the data populates
+      $scope.selectedSession = $scope.sessionArray[0];
+
+      for (var j = 0; j < $scope.characterArray.length; j++) {
+        if ($scope.characterArray[j].source == 'pre-made') {
+          $scope.preMadeNpcSelect = $scope.characterArray[j];
+          break;
+        }
+      }
+
+      for (var i = 0; i < $scope.characterArray.length; i++) {
+        if ($scope.characterArray[i].source == 'custom') {
+          $scope.customNpcSelect = $scope.characterArray[i];
+          break;
+        }
+      }
+    };
 
     $scope.refreshSessionData();
 
