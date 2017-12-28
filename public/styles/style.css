@@ -154,7 +154,7 @@ the input.html view*/
 
 /*styling for the large buttons in the session div at the top of the page in the tracker.html view*/
 #session>button {
-    height: 10%; /*30/1280 = 2.34375%*/
+    height: 30px; /*30/1280 = 2.34375%*/
     width: 19.53125%; /*250/1280 = 19.53125%*/
     font-size: 15px;
     background-color: black;
