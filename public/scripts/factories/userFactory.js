@@ -3,6 +3,9 @@ myApp.factory('UserFactory', ['$http', function ($http) {
     var characterList = [];
     var sessionList = [];
 
+    var trackerStateSave = function () {
+    };
+
     //The call to get the pre-made npcs from the similarly named collection from the database
     var retrieveAllNpcs = function () {
         var promise = $http.get('/preMadeNpcs').then(function (response) {
@@ -26,8 +29,10 @@ myApp.factory('UserFactory', ['$http', function ($http) {
         $http.post('/snapshot', sessionObject);
       };
 
+    //var retrieveSessions = function (id)    :old code, id seemingly not required due-
+    //to bypassing all the interior code
     //get the list of sessions based on the logged in user to populate the dropdown
-    var retrieveSessions = function (id) {
+    var retrieveSessions = function () {
         var promise = $http.get('/snapshot').then(function (response) {
             sessionList = response.data;
           });
