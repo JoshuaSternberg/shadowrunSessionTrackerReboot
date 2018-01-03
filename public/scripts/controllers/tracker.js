@@ -29,6 +29,7 @@ myApp.controller('Tracker', ['$scope', '$location', 'UserFactory', function
             $scope.sessionArray = $scope.userFactory.factoryRetrieveSessionsList();
 
             $scope.populateDropdownBoxes();
+            $scope.populateCurrentSession();
 
             console.log('Session Array ', $scope.sessionArray);
             console.log('Pre-made NPC Array:', $scope.preMadeNpcArray);
@@ -55,6 +56,12 @@ myApp.controller('Tracker', ['$scope', '$location', 'UserFactory', function
         }
       }
     };
+
+    $scope.populateCurrentSession = function () {
+        $scope.preMadeNpcArray = $scope.userFactory.
+          factoryStoreCurrentTrackerSessionPreMadeNpcList();
+        $scope.customNpcArray = $scope.userFactory.factoryStoreCurrentTrackerSessionCustomNpcList();
+      };
 
     $scope.refreshSessionData();
 
