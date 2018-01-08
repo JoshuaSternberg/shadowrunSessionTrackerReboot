@@ -8,6 +8,7 @@
     </select>
 
     <button class="load" ng-click="loadSession(selectedSession)">Load Selected Session</button>
+    <button class="deleteSession" ng-click="deleteSession()">Delete Current Session</button>
     <button class="save" ng-click="saveSession()">Save This Session</button>
     <button class="changeUser" ng-click="loginView()">Change User</button>
 
@@ -30,7 +31,7 @@
 
 
             <p class="charDisplaySub-header">Attributes:</p>
-            <p class="attributesHeaderStyling">
+            <p class="attributesColumnLabelStyling">
                 <span class="attributesHeaderSpacingSpan">B</span><span class="attributesHeaderSpacingSpan">A</span>
                 <span class="attributesHeaderSpacingSpan">R</span><span class="attributesHeaderSpacingSpan">S</span>
                 <span class="attributesHeaderSpacingSpan">W</span><span class="attributesHeaderSpacingSpan">L</span>
@@ -100,7 +101,7 @@
             <span>Metatype: {{customNpc.metatype}}</span>
 
             <p class="charDisplaySub-header">Attributes:</p>
-            <p class="attributesHeaderStyling"><span class="attributesHeaderSpacingSpan">B</span><span class="attributesHeaderSpacingSpan">A</span>
+            <p class="attributesColumnLabelStyling"><span class="attributesHeaderSpacingSpan">B</span><span class="attributesHeaderSpacingSpan">A</span>
                 <span class="attributesHeaderSpacingSpan">R</span><span class="attributesHeaderSpacingSpan">S</span>
                 <span class="attributesHeaderSpacingSpan">W</span><span class="attributesHeaderSpacingSpan">L</span>
                 <span class="attributesHeaderSpacingSpan">I</span><span class="attributesHeaderSpacingSpan">C</span>

@@ -1,7 +1,20 @@
 myApp.factory('UserFactory', ['$http', function ($http) {
 
+    //Stores the character data retrieved from the database
     var characterList = [];
+
+    //Stores the session data retreived from the database
     var sessionList = [];
+
+    //Stores the currently displayed pre-made NPC information
+    var currentPreMadeNpcList = [];
+
+    //Stores the currently displayed custom NPC information
+    var currentCustomNpcList = [];
+
+    //
+    var trackerStateSave = function () {
+    };
 
     //The call to get the pre-made npcs from the similarly named collection from the database
     var retrieveAllNpcs = function () {
@@ -13,9 +26,7 @@ myApp.factory('UserFactory', ['$http', function ($http) {
       };
 
     // save the npc to the database
-    var saveNpc = function (npc, weapons) {
-        console.log('userFactory weapon array object: ', weapons);
-        npc.weapon = weapons;
+    var saveNpc = function (npc) {
         console.log('userFactory npc object: ', npc);
         $http.post('/preMadeNpcs', npc).then(function (response) {
         });
@@ -28,8 +39,10 @@ myApp.factory('UserFactory', ['$http', function ($http) {
         $http.post('/snapshot', sessionObject);
       };
 
+    //var retrieveSessions = function (id)    :old code, id seemingly not required due-
+    //to bypassing all the interior code
     //get the list of sessions based on the logged in user to populate the dropdown
-    var retrieveSessions = function (id) {
+    var retrieveSessions = function () {
         var promise = $http.get('/snapshot').then(function (response) {
             sessionList = response.data;
           });
@@ -50,21 +63,34 @@ myApp.factory('UserFactory', ['$http', function ($http) {
           },
 
         //call the function to save a new npc to the database
-        factorySaveNpc: function (npc, weapons) {
-            return saveNpc(npc, weapons);
+        factorySaveNpc: function (npc) {
+            return saveNpc(npc);
           },
 
+        //Take in the custom NPC and pre-made NPC arrays and call the function to save
+        //them to the database
         factorySaveSession: function (custom, preMade) {
             return saveSession(custom, preMade);
           },
 
+        //Retrieve all saved sessions for the user
         factoryRetrieveSessions: function () {
             return retrieveSessions();
           },
 
-        //explose the sessionList to the rest of the program
+        //expose the sessionList
         factoryRetrieveSessionsList: function () {
             return sessionList;
+          },
+
+        //Expose the currentCustomNpcList storage variable to the program
+        factoryStoreCurrentTrackerSessionCustomNpcList: function () {
+            return currentCustomNpcList;
+          },
+
+        //Expose the currentPreMadeNpcList storage variable to the program
+        factoryStoreCurrentTrackerSessionPreMadeNpcList: function () {
+            return currentPreMadeNpcList;
           },
       };
 

@@ -85,7 +85,9 @@
           <p class="skillListHeader">Skills:</p>
             <div class="skillDisplay" ng-repeat="skill in skillsArray track by $index">
                 <button class="deleteSkill" ng-click="deleteSkill($index)">X</button>
-                <span class="skillListBody">{{skill.name}}: {{skill.rank}}</span>
+                <span class="skillListBody">
+                  <span class="weaponSkillNameColorStyle">{{skill.name}}</span>: {{skill.rank}}
+                </span>
             </div>
         </div>
     </div>
@@ -126,11 +128,16 @@
           <p class="weaponListHeader">Weapons:</p>
             <div class="weaponDisplay" ng-repeat="weapon in weaponsArray track by $index">
                 <button class="deleteWeapon" ng-click="deleteWeapon($index)">X</button>
-                <span class="weaponListBody">{{weapon.model}} [{{weapon.type}}, {{weapon.damage}}, {{weapon.armor_piercing}} AP,
+                <span class="weaponListBody">
+                  <span class="weaponSkillNameColorStyle">{{weapon.model}}</span> [{{weapon.type}},
+                  {{weapon.damage}}, {{weapon.armor_piercing}} AP,
                   {{weapon.firing_modes}}, {{weapon.ammo_type}} ammo, {{weapon.recoil_compensation}} RC,
-                  Acc: {{weapon.accuracy}}]<br>Notes: {{weapon.weapon_notes}}</span>
+                  Acc: {{weapon.accuracy}}]
+                  <br>
+                  <span class="weaponSkillNameColorStyle">Notes: {{weapon.weapon_notes}}</span>
+                </span>
             </div>
         </div>
     </div>
-    
+
 </form>

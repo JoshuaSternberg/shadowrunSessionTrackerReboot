@@ -11,7 +11,8 @@ router.post('/', function (req, res) {
       characterObjectArray.push(new Character(req.body.snapshot[i]));
     }
 
-    console.log(req.body);
+    console.log('snapshot.js body', req.body);
+    console.log('snapshot.js user object', req.user);
     var addSnapshot = new Snapshot({
         user_id: req.user.id,
         snapshot_name: req.body.snapshot_name,

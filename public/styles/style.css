@@ -4,7 +4,7 @@
 }
 
 body {
-    width: 90%;
+    width: 90%; /*1280px*/
     margin: auto;
     background-color: black;
     color: white;
@@ -154,8 +154,8 @@ the input.html view*/
 
 /*styling for the large buttons in the session div at the top of the page in the tracker.html view*/
 #session>button {
-    height: 30px;
-    width: 300px;
+    height: 30px; /*30/1280 = 2.34375%*/
+    width: 19.53125%; /*250/1280 = 19.53125%*/
     font-size: 15px;
     background-color: black;
     color: #ff9000;
@@ -217,7 +217,7 @@ the input.html view*/
 }
 
 /*Styling for the div wrapping the attributes in the tracker.html view*/
-.attributesHeaderStyling {
+.attributesColumnLabelStyling {
     background-color: black;
     color: #DAA520;
     border: 1px solid #DAA520;
@@ -275,7 +275,7 @@ and the input.html view */
 
 /*styling for the input form on the input.html view*/
 #input {
-    width: 60%;
+    width: 70%;
     margin: auto;
     margin-top: 40px;
 }
@@ -302,17 +302,15 @@ and the input.html view */
 /*positioning for the #skills and #skillList divs on the input.html view*/
 
 #skills {
-    width: 49%;
+    width: 45%;
     float: left;
-    margin-right: 1px;
 }
 
 /*positioning for the #weaponStats and #weaponList divs on the input.html view*/
 
 #weaponStats {
-    width: 49%;
+    width: 45%;
     float: right;
-    margin-left: 1px;
 }
 
 #weaponListContainer, #skillListContainer {
@@ -320,7 +318,7 @@ and the input.html view */
     width: 100%;
 }
 
-/*Styling for the saveChar 'button' on the input.html view*/
+/*Styling for the saveChar input acting as a buttom on the input.html view*/
 .saveChar {
     background-color: black;
     color: #ff9000;
@@ -383,4 +381,8 @@ and the input.html view */
     padding: 5px;
     background-color: #707070;
     margin-top: 2px;
+}
+
+.weaponSkillNameColorStyle {
+    color: #DAA520;
 }
